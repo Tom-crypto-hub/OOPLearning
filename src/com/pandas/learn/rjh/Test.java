@@ -5,4 +5,7 @@ package com.pandas.learn.rjh;
  * @create 2020-08-12 9:51
  */
 public class Test {
+    public static void main(String[] args) {
+        System.out.println("ranjunhao");
+    }
 }
