@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5c377eab-8377-4aa2-84de-3ca0c1efe02a" name="Default Changelist" comment="111">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/OPPLearning/com/pandas/learn/qh/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/OPPLearning/com/pandas/learn/rjh/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/OPPLearning/com/pandas/learn/wj/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/OPPLearning/com/pandas/learn/xzh/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/OPPLearning/com/pandas/learn/zh/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/OPPLearning/com/pandas/learn/zt/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/OPPLearning/com/pandas/wj/learn/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/OPPLearning/com/pandas/wj/learn/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pandas/learn/zt/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/Test.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fymHYN6FlZt1pHEvRGcV6GaXjj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pandas.wj.learn.Main" />
+      <module name="OPPLearning" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c377eab-8377-4aa2-84de-3ca0c1efe02a" name="Default Changelist" comment="" />
+      <created>1597198619800</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597198619800</updated>
+      <workItem from="1597198621980" duration="4127000" />
+    </task>
+    <task id="LOCAL-00001" summary="111">
+      <created>1597199687606</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597199687606</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/OOPLearning" />
+    </ignored-roots>
+    <MESSAGE value="111" />
+    <option name="LAST_COMMIT_MESSAGE" value="111" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="74" key="#Notifications" timestamp="1597202883715">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1597202883715" />
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597198675596">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1597198675596" />
+    <state x="498" y="200" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1597198673237">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="200" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1597198673237" />
+    <state x="287" y="14" key="CommitChangelistDialog2" timestamp="1597199685673">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="287" y="14" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597199685673" />
+    <state x="294" y="78" key="DiffContextDialog" timestamp="1597199498599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="294" y="78" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1597199498599" />
+    <state x="272" y="0" key="SettingsEditor" timestamp="1597198713045">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="272" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597198713045" />
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1597202813358">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597202813358" />
+    <state x="630" y="220" key="git4idea.merge.GitPullDialog" timestamp="1597212059615">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="630" y="220" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1597212059615" />
+  </component>
+</project>
