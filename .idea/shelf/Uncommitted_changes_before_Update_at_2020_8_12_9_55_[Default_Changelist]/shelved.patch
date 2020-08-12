@@ -1,0 +1,49 @@
+Index: OPPLearning.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- OPPLearning.iml	(revision 5b292ed77f682c1b814079637a7c997cdc06a071)
++++ OPPLearning.iml	(date 1597195983877)
+@@ -1,5 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <module type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="javaeeApplication" name="javaEEApplication">
++      <configuration>
++        <descriptors>
++          <deploymentDescriptor name="application.xml" url="file://$MODULE_DIR$/META-INF/application.xml" />
++        </descriptors>
++      </configuration>
++    </facet>
++  </component>
+   <component name="NewModuleRootManager" inherit-compiler-output="true">
+     <exclude-output />
+     <content url="file://$MODULE_DIR$">
+@@ -8,5 +17,4 @@
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+-</module>
+-
++</module>
+\ No newline at end of file
+Index: .idea/artifacts/OPPLearning_javaEEApplication_exploded.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/artifacts/OPPLearning_javaEEApplication_exploded.xml	(date 1597196013184)
++++ .idea/artifacts/OPPLearning_javaEEApplication_exploded.xml	(date 1597196013184)
+@@ -0,0 +1,8 @@
++<component name="ArtifactManager">
++  <artifact type="exploded-ear" name="OPPLearning:javaEEApplication exploded">
++    <output-path>$PROJECT_DIR$/out/artifacts/OPPLearning_javaEEApplication_exploded</output-path>
++    <root id="root">
++      <element id="javaee-facet-resources" facet="OPPLearning/javaeeApplication/javaEEApplication" />
++    </root>
++  </artifact>
++</component>
+\ No newline at end of file
