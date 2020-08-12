@@ -7,5 +7,6 @@ package com.pandas.learn.zt;
 public class Test {
     public static void main(String[] args) {
         System.out.println("大噶好，我是渣渣灰");
+        System.out.println("我是谷天乐");
     }
 }
