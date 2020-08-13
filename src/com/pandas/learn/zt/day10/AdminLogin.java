@@ -17,11 +17,11 @@ public class AdminLogin {
                     count = 6;
                 } else {
                     System.out.println("密码错误");
-                    count += 1;
+                    count ++;
                 }
             }else{
                 System.out.println("管理员账户输入错误");
-                count += 1;
+                count ++;
             }
         }
     }
