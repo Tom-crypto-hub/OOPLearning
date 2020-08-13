@@ -9,7 +9,9 @@ public class UserController {
     private int total;
     // 用户数组容量
     private int cap = 16;
-
+    public UserController(){
+        User[] users = new User[cap];
+    }
     // 获取用户列表
 
     // 新增用户
