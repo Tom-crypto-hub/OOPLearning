@@ -105,7 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597307378572</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="2">
+      <created>1597316504573</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597316504573</updated>
+    </task>
+    <task id="LOCAL-00005" summary="111">
+      <created>1597316685419</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1597316685419</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +130,7 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/OOPLearning" />
     </ignored-roots>
+    <MESSAGE value="2" />
     <MESSAGE value="111" />
     <option name="LAST_COMMIT_MESSAGE" value="111" />
   </component>
@@ -140,11 +155,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="488" y="305" width="561" height="220" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1597306464148" />
-    <state x="287" y="0" key="CommitChangelistDialog2" timestamp="1597316658461">
+    <state x="287" y="0" key="CommitChangelistDialog2" timestamp="1597316684020">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="255" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597305902941" />
-    <state x="287" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597316658461" />
+    <state x="287" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597316684020" />
     <state x="294" y="78" key="DiffContextDialog" timestamp="1597199498599">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -153,15 +168,15 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1597304886817" />
-    <state x="463" y="0" key="SettingsEditor" timestamp="1597311527784">
+    <state x="463" y="0" key="SettingsEditor" timestamp="1597318034855">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="463" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597311527784" />
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1597316672790">
+    <state x="463" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597318034855" />
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1597316714565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="321" y="139" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1597305905564" />
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597316672790" />
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597316714565" />
     <state x="560" y="205" key="git4idea.merge.GitPullDialog" timestamp="1597303732156">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

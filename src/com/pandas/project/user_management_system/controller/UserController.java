@@ -48,7 +48,6 @@ public class UserController {
     // 删除用户
     public boolean delUser(int index){
         if(index > total || index < 0){
-            System.out.println("输入的id错误");
             return false;
         }
         for (int i = index-1; i <total-1 ; i++) {
