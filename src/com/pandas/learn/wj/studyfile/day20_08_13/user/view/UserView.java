@@ -50,7 +50,6 @@ public class UserView {
         System.out.println("---------------------------------------------");
         User user = new User();
         System.out.println("请输入要添加的用户信息：");
-        // System.out.print("编号：");
         System.out.print("用户名：");
         user.setName(scanner.next());
         System.out.print("年龄：");
