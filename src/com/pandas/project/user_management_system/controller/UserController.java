@@ -2,7 +2,7 @@ package com.pandas.project.user_management_system.controller;
 
 import com.pandas.project.user_management_system.model.User;
 
-import javax.jws.soap.SOAPBinding;
+
 
 public class UserController {
     // 用户组
@@ -57,6 +57,7 @@ public class UserController {
         users[total-1]=null;
         total--;
         return true;
+        //ssssssssssssssssssssss
     }
 
     // 修改用户
