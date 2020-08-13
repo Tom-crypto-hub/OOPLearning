@@ -52,4 +52,6 @@ public class Prictice {
         }
         System.out.println("和为：" + sum);
     }
+
+
 }
