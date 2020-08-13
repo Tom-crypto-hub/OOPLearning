@@ -1,11 +1,13 @@
-package com.pandas.learn.zt.day10;
+package com.pandas.learn.zt.day10.admin;
+
+import com.pandas.learn.zt.day10.admin.Administrator;
 
 import java.util.Scanner;
 
 public class AdminLogin {
     public void adminLogin(Administrator administrator){
         Scanner scanner = new Scanner(System.in);
-        int count=1;
+        int count=1;//计入操作次数
         while (count<=5) {
             System.out.println("请输入管理员账户");
             String loginAccount = scanner.next();

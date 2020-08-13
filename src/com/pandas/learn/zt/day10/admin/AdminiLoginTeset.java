@@ -1,4 +1,6 @@
-package com.pandas.learn.zt.day10;
+package com.pandas.learn.zt.day10.admin;
+
+import com.pandas.learn.zt.day10.admin.Administrator;
 
 public class AdminiLoginTeset {
     public static void main(String[] args) {

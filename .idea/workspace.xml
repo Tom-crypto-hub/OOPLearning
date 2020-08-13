@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0954295a-783c-4854-ad97-0e3e0aba1f74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/UserController.java" afterDir="false" />
+    <list default="true" id="5c377eab-8377-4aa2-84de-3ca0c1efe02a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/user/model/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/AdminLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/admin/AdminLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/AdminiLoginTeset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/admin/AdminiLoginTeset.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/admin/Administrator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,17 +63,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />

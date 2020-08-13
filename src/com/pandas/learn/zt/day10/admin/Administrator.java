@@ -1,4 +1,4 @@
-package com.pandas.learn.zt.day10;
+package com.pandas.learn.zt.day10.admin;
 
 public class Administrator {
     private String loginAccount;
