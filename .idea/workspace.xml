@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c377eab-8377-4aa2-84de-3ca0c1efe02a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/user/model/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_8_12_9_55__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_8_12_9_55__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_8_12_9_56__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_8_12_9_56__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/AdminLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/admin/AdminLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/AdminiLoginTeset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/admin/AdminiLoginTeset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/admin/Administrator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/util/MenuUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/util/MenuUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +40,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -63,19 +63,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -87,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597198619800</updated>
       <workItem from="1597198621980" duration="4127000" />
+      <workItem from="1597311716267" duration="4201000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <created>1597199687606</created>
@@ -113,7 +114,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

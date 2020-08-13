@@ -23,8 +23,8 @@ public class UserController {
     }
 
     // 获取用户列表
-    public void show(){
-
+    public User[] show(){
+        return users;
     }
 
     // 新增用户
@@ -33,7 +33,7 @@ public class UserController {
     }
 
     // 删除用户
-    public boolean delUser(User user){
+    public boolean delUser(int id){
         return false;
     }
 
