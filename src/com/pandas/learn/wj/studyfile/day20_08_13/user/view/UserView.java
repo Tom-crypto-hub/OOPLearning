@@ -56,7 +56,7 @@ public class UserView {
         System.out.print("年龄：");
         user.setAge(scanner.nextInt());
         System.out.print("性别：");
-        user.setGender(scanner.next().toCharArray()[0]);
+        user.setGender(scanner.next().charAt(0));
         System.out.print("邮箱：");
         user.setEmail(scanner.next());
         System.out.print("手机号：");
@@ -71,7 +71,9 @@ public class UserView {
         System.out.println("请输入要删除的用户信息：");
         System.out.print("用户名：");
         user.setName(scanner.next());
-        users.deleteUser(user);
+        if(users.deleteUser(user))
+            System.out.println("删除成功");
+        else System.out.println("删除失败");
         System.out.println("---------------------------------------------");
     }
 
@@ -89,7 +91,9 @@ public class UserView {
         user.setEmail(scanner.next());
         System.out.print("新的手机号：");
         user.setPhone(scanner.next());
-        users.updateUser(user);
+        if(users.updateUser(user))
+        System.out.println("修改成功");
+        else System.out.println("修改失败");
         System.out.println("---------------------------------------------");
     }
 }
