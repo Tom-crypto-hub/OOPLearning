@@ -1,4 +1,4 @@
-package com.wedu.project.util;
+package com.pandas.project.user_management_system.util;
 
 import java.util.Scanner;
 
