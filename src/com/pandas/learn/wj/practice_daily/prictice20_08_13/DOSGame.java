@@ -11,19 +11,15 @@ public class DOSGame {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int E = 0;
-        int lose = 0;
-
+        sc = new Scanner(System.in);
         String[] strs = sc.nextLine().split(" ");
-        int [] arr = new int[strs.length];
-        for(int i = 0; i < strs.length; i++){
+        int [] arr = new int[N];
+        for(int i = 0; i < N; i++){
             arr[i] = Integer.parseInt(strs[i]);
         }
-
-        E = arr[arr.length - 1];
-        for(int i = arr.length - 1; i >= 0; i--){
-            if(arr[i] > E)
-                lose = arr[i] - E;
+        for(int i = N-1;i >= 0;i--){
+            E = (int) Math.ceil(((arr[i] + E) / 2.0));
         }
-
+        System.out.println(E);
     }
 }
