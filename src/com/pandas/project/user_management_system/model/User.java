@@ -61,6 +61,10 @@ public class User {
         this.email = email;
     }
 
+    public User(){
+
+    }
+
     public User( int id, String name, char gender, int age, String phone, String email){
         this.id = id;
         this.name = name;

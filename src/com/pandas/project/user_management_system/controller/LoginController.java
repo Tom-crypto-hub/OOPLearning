@@ -6,5 +6,8 @@ package com.pandas.project.user_management_system.controller;
  */
 public class LoginController {
     // 登录
+    public static boolean login(String name, String password){
+        return false;
+    }
 
 }
