@@ -4,6 +4,7 @@ import com.pandas.project.user_management_system.controller.LoginController;
 import com.pandas.project.user_management_system.controller.UserController;
 import com.pandas.project.user_management_system.model.User;
 import com.pandas.project.user_management_system.util.FileOperation;
+import com.pandas.project.user_management_system.util.LogSystem;
 import com.pandas.project.user_management_system.util.MenuUtil;
 import com.pandas.project.user_management_system.util.NumberUtil;
 
@@ -19,6 +20,7 @@ import java.util.Scanner;
 public class View {
     UserController userController = new UserController(Objects.requireNonNull(FileOperation.readTxt()));
     Scanner scanner = new Scanner(System.in);
+    LogSystem logSystem = new LogSystem();
 
     public View() throws IOException {
     }
@@ -37,6 +39,7 @@ public class View {
     // 菜单界面
     public void printMenu(){
         System.out.println("---------------------------------");
+        System.out.println("\t\t\t0.最近日志");
         System.out.println("\t\t\t1.用户列表");
         System.out.println("\t\t\t2.新增用户");
         System.out.println("\t\t\t3.删除用户");
@@ -80,8 +83,9 @@ public class View {
             System.out.println("输入格式不符合规范");
             email = "12357@qq.com";
         }
-        User user=new User(userController.getTotal(),name,gender, age,phone,email);
+        User user=new User(userController.getTotal() + 1,name,gender, age,phone,email);
         userController.addUser(user);
+        logSystem.addLogs("新增用户：" + user.show());
     }
 
     // 删除用户界面
@@ -89,6 +93,7 @@ public class View {
         System.out.println("\t-----------删除用户-----------");
         System.out.println("请输入要删除的用户编号：");
         int userId=scanner.nextInt();
+        User user = userController.findUser(userId);
         System.out.println("确定删除Y/N：");
         char yesOrNo=scanner.next().charAt(0);
         if(yesOrNo=='Y'){
@@ -97,7 +102,9 @@ public class View {
             }else {
                 System.out.println("删除失败");
             }
+            logSystem.addLogs("删除用户成功：" + user.show());
         }else {
+            logSystem.addLogs("删除用户失败：" + user.show());
             return;
         }
 
@@ -137,8 +144,10 @@ public class View {
         if(yesOrNo=='Y') {
             if (userController.updateUser(user)) {
                 System.out.println("修改成功");
+                logSystem.addLogs("修改用户成功：" + user.show());
             } else {
                 System.out.println("修改失败");
+                logSystem.addLogs("修改用户失败：" + user.show());
             }
         }else{
             return;
@@ -158,6 +167,8 @@ public class View {
     public void exitSystem() throws IOException {
         // 存入文件
         FileOperation.writeTxt(userController.show(), userController.getTotal());
+        // 写入日志
+        logSystem.resetLogContext();
         System.out.println("系统退出成功！");
         System.exit(0);
     }
@@ -165,6 +176,7 @@ public class View {
     // 汇总
     public void start() throws IOException {
         if (loginUI()) {
+            logSystem.addLogs("登录系统成功！登录时间：" + FileOperation.getCurrentTime());
             while (true) {
                 printMenu();
                 System.out.println("请输入指令");
@@ -187,6 +199,9 @@ public class View {
                         break;
                     case 6:
                         exitSystem();
+                        break;
+                    case 0:
+                        logSystem.showLog();
                         break;
                     default:
                         System.out.println("输入指令错误");

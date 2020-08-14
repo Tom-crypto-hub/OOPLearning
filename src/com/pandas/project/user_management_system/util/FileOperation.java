@@ -2,9 +2,10 @@ package com.pandas.project.user_management_system.util;
 
 import com.pandas.project.user_management_system.model.User;
 
-import javax.sound.midi.SoundbankResource;
 import java.io.*;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * @author wangjing
@@ -15,13 +16,23 @@ import java.util.Arrays;
 
 public class FileOperation {
 
+    // 获取当前系统时间
+    public static String getCurrentTime(){
+        SimpleDateFormat dateFormater = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date currentTime = new Date();
+        return dateFormater.format(currentTime);
+    }
+
     public static String getFilename(){
+        String str = "UserList.txt";
+        return getLogFilename(str);
+    }
+
+    public static String getLogFilename(String name){
         // 生成文件路径
         String classPath = FileOperation.class.getResource("/").getPath();
         classPath = classPath.substring(1, classPath.length());
-        System.out.println(classPath + "UserList.txt");
-        return classPath + "UserList.txt";
-
+        return classPath + name;
     }
 
     // 读取文件

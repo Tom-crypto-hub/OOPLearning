@@ -22,10 +22,11 @@ public class LogSystem {
     }
 
     public LogSystem() throws IOException {
-        this._filename = FileOperation.getFilename();
+        this._filename = FileOperation.getLogFilename("Logs.txt");
         this._length = 0;
         this._logs = new String[maxLogNum];
         getLogs();
+        System.out.println(_length);
     }
 
     // 读取日志信息
@@ -59,8 +60,8 @@ public class LogSystem {
     // 最后的存入日志信息操作
     public void resetLogContext() throws IOException {
         StringBuilder str = new StringBuilder();
-        for(String logs : this._logs){
-            str.append(logs).append("\n");
+        for(int i = 0; i < _length; i++){
+            str.append(_logs[i]).append("\n");
         }
         FileOperation.writeFile(this._filename, str.toString());
     }
