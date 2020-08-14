@@ -14,7 +14,7 @@ public class User {
 
 
     public String show(){
-        return id + "\t" ;
+        return id + "\t" + name + "\t" + gender + "\t" + age + "\t" + phone + "\t" + email;
     }
 
     public int getId() {
