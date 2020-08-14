@@ -30,9 +30,29 @@ public class View {
         System.out.println("\t\t\t*****************************");
         System.out.println("\t\t**************************************");
         System.out.println("\t******************请登录******************************");
-        LoginService loginService =new LoginService();
         //登陆成功返回true，登陆失败返回false
-        return loginService.login();
+        return loginInputView();
+    }
+
+    public boolean loginInputView(){
+        for(int i = 0; i < 5; i++) {
+            System.out.println("请输入管理员账户：");
+            String adminName = scanner.next();
+            System.out.println("请输入管理员密码：");
+            String adminPassword = scanner.next();
+
+            LoginStatus status = LoginService.login(adminName, adminPassword);
+            if (status == LoginStatus.ERROR_ACCOUNT) {
+                System.out.println("管理用户名不存在，请再次输入：");
+            } else if (status == LoginStatus.ERROR_PASSWORD) {
+                System.out.println("密码错误，请再次输入：");
+            } else if (status == LoginStatus.SUCCESSED) {
+                System.out.println("登陆成功！");
+                return true;
+            }
+        }
+        System.out.println("管理员用户名和密码输入错误超过5次，程序退出！");
+        return false;
     }
 
     // 菜单界面
