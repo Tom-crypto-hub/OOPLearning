@@ -1,5 +1,6 @@
 package com.pandas.project.user_management_system.view;
 
+import com.pandas.project.user_management_system.controller.LoginController;
 import com.pandas.project.user_management_system.controller.UserController;
 
 import java.util.Scanner;
@@ -14,7 +15,13 @@ public class View {
 
     // 欢迎来到用户管理登录界面
     public boolean loginUI(){
-        return false;
+        System.out.println("\t\t\t\t欢迎进入用户管理系统");
+        System.out.println("\t\t\t*****************************");
+        System.out.println("\t\t**************************************");
+        System.out.println("\t******************请登录******************************");
+        LoginController loginController=new LoginController();
+        //登陆成功返回true，登陆失败返回false
+        return loginController.login();
     }
 
     // 菜单界面

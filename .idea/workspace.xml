@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c377eab-8377-4aa2-84de-3ca0c1efe02a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/user/model/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/user/service/UserService.java" afterDir="false" />
+    <list default="true" id="4c864ec9-1e48-47c8-84f9-994f568eb9a0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/AdminLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/admin/AdminLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/AdminiLoginTeset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/admin/AdminiLoginTeset.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/learn/zt/day10/admin/Administrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OPPLearning/META-INF/OPPLearning.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,20 @@
       <recent name="C:\Users\z\OOPLearning\src\com\pandas\learn\zt" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pandas.project.user_management_system.view.Test" />
+      <module name="OPPLearning" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pandas.project.user_management_system.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.pandas.wj.learn.Main" />
       <module name="OPPLearning" />
@@ -63,6 +74,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -157,6 +173,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1597304886817" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1597323590773">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1597323590773" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1597323590773">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1597323590773" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1597323590773">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1597323590773" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1597323590773">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1597323590773" />
     <state x="272" y="0" key="SettingsEditor" timestamp="1597198713045">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
