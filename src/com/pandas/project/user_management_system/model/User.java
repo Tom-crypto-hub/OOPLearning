@@ -13,6 +13,10 @@ public class User {
     private String email;
 
 
+    public String show(){
+        return id + "\t" ;
+    }
+
     public int getId() {
         return id;
     }
