@@ -33,11 +33,14 @@ public class UserController {
 
     // 新增用户
     public boolean addUser(User user){
-        if (users.length<=total){
+        if (cap==total){
+            //用户数组扩容
             cap = cap<<1;
+            User[] users = new User[cap];
+            System.arraycopy(this.users, 0, users, 0, total);
             users[total]=user;
             total++;
-            return true;
+            this.users=users;
         }else{
             users[total]=user;
             total++;
@@ -60,10 +63,11 @@ public class UserController {
 
     // 修改用户
     public boolean updateUser(User user){
+
         return false;
     }
 
-    // 查找用户
+    // 查找用户，二分查找算法
     public User findUser(int index){
         return new User();
     }
