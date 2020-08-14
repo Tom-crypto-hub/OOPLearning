@@ -2,7 +2,7 @@ package com.pandas.project.user_management_system.controller;
 
 import com.pandas.project.user_management_system.model.User;
 
-import javax.jws.soap.SOAPBinding;
+
 
 public class UserController {
     // 用户组
@@ -25,7 +25,7 @@ public class UserController {
     // 获取用户列表
     public User[] show(){
         User[] usersInfo = new User[total];
-        for (int i = 0; i <usersInfo.length ; i++) {
+        for (int i = 0; i <usersInfo.length; i++) {
             usersInfo[i]=users[i];
         }
         return usersInfo;
@@ -33,14 +33,11 @@ public class UserController {
 
     // 新增用户
     public boolean addUser(User user){
-        if (cap==total){
-            //用户数组扩容
+        if (users.length<=total){
             cap = cap<<1;
-            User[] users = new User[cap];
-            System.arraycopy(this.users, 0, users, 0, total);
             users[total]=user;
             total++;
-            this.users=users;
+            return true;
         }else{
             users[total]=user;
             total++;
@@ -59,21 +56,31 @@ public class UserController {
         users[total-1]=null;
         total--;
         return true;
+
     }
 
     // 修改用户
     public boolean updateUser(User user){
-
-        return false;
+        if(user.getId()-1<0||user.getId()>total){
+            System.out.println("当前用户不存在");
+            return false;
+        }
+        users[user.getId()-1]=user;
+        return true;
     }
 
-    // 查找用户，二分查找算法
+    // 查找用户
     public User findUser(int index){
-        return new User();
+        if(index-1<0||index>total){
+            System.out.println("当前用户不存在");
+
+        }
+
+        return users[index-1];
     }
 
     // 退出
-    public int exit(){
-        return 0;
+    public void exit(){
+        System.exit(0);
     }
 }

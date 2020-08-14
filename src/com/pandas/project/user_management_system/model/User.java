@@ -13,6 +13,10 @@ public class User {
     private String email;
 
 
+    public String show(){
+        return id + "\t" + name + "\t" + gender + "\t" + age + "\t" + phone + "\t" + email;
+    }
+
     public int getId() {
         return id;
     }
