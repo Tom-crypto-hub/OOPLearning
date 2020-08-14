@@ -25,7 +25,7 @@ public class UserController {
     // 获取用户列表
     public User[] show(){
         User[] usersInfo = new User[total];
-        for (int i = 0; i <usersInfo.length ; i++) {
+        for (int i = 0; i <usersInfo.length; i++) {
             usersInfo[i]=users[i];
         }
         return usersInfo;
