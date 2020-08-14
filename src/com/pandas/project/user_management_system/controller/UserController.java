@@ -17,6 +17,16 @@ public class UserController {
         users = new User[cap];
     }
 
+    // 读取文件内容初始化用户数组
+    public UserController(User[] users){
+        while (cap < users.length){
+            cap = cap<<1;
+        }
+        this.users = new User[cap];
+        this.total = users.length;
+        System.arraycopy(users, 0, this.users, 0, this.total);
+    }
+
     // 获取用户个数
     public int getTotal(){
         return this.total;

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a0f01d6-dba0-4567-b8d4-aeba8dd2c2ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_8_13_20_33__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_8_13_20_33__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_8_14_8_09__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_8_14_8_09__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/util/FileOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/util/FileOperation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597363431895</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="文件操作工具类">
+      <created>1597369160396</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1597369160396</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,10 +190,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="488" y="305" width="561" height="220" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1597306464148" />
-    <state x="255" y="0" key="CommitChangelistDialog2" timestamp="1597363424603">
+    <state x="255" y="0" key="CommitChangelistDialog2" timestamp="1597369159482">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="255" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597363424603" />
+    <state x="255" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1597369159482" />
     <state x="287" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1597316684020" />
     <state x="294" y="78" key="DiffContextDialog" timestamp="1597199498599">
       <screen x="0" y="0" width="1536" height="824" />
@@ -219,10 +223,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="463" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597318034855" />
-    <state x="321" y="139" key="Vcs.Push.Dialog.v2" timestamp="1597363437865">
+    <state x="321" y="139" key="Vcs.Push.Dialog.v2" timestamp="1597369192830">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="321" y="139" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1597363437865" />
+    <state x="321" y="139" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1597369192830" />
     <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597316714565" />
     <state x="363" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1597363209312">
       <screen x="0" y="0" width="1366" height="768" />
@@ -232,10 +236,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="475" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1597363626058" />
-    <state x="560" y="205" key="git4idea.merge.GitPullDialog" timestamp="1597303732156">
+    <state x="560" y="205" key="git4idea.merge.GitPullDialog" timestamp="1597369168971">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="560" y="205" key="git4idea.merge.GitPullDialog/0.0.1366.768@0.0.1366.768" timestamp="1597303732156" />
+    <state x="560" y="205" key="git4idea.merge.GitPullDialog/0.0.1366.768@0.0.1366.768" timestamp="1597369168971" />
     <state x="630" y="220" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1597212059615" />
   </component>
 </project>
