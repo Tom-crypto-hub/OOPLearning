@@ -69,6 +69,8 @@ public class View {
         String name=MenuUtil.readString(5);
         System.out.println("请输入性别：");
         char gender=MenuUtil.readChar();
+        if(gender != '男' || gender != '女')
+            gender = '男';
         System.out.println("请输入年龄：");
         int age=MenuUtil.readInt();
         System.out.println("请输入电话：");
@@ -81,10 +83,12 @@ public class View {
         String email=MenuUtil.readString(20);
         if (!NumberUtil.checkEmail(email)){
             System.out.println("输入格式不符合规范");
-            email = "12357@qq.com";
+            email = "123567@qq.com";
         }
         User user=new User(userController.getTotal() + 1,name,gender, age,phone,email);
-        userController.addUser(user);
+        if(userController.addUser(user))
+            System.out.println("用户添加成功！");
+        else System.out.println("用户添加失败！");
         logSystem.addLogs("新增用户：" + user.show());
     }
 
@@ -124,6 +128,8 @@ public class View {
         user.setName(MenuUtil.readString(5,user.getName()));
         System.out.println("请输入性别：");
         user.setGender(MenuUtil.readChar(user.getGender()));
+        if(user.getGender() != '男' || user.getGender() != '女')
+            user.setGender('男');
         System.out.println("请输入年龄：");
         user.setAge(MenuUtil.readInt(user.getAge()));
         System.out.println("请输入电话：");
