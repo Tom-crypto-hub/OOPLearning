@@ -119,13 +119,9 @@ public class View {
     public void findUserUI(){
         System.out.println("\t-----------查找用户-----------");
         System.out.println("请输入查找用户的编号：");
-        User[] users=userController.show();
         int id=scanner.nextInt();
-        if(id>users.length){
-            System.out.println("当前用户不存在");
-            return;
-        }
-        System.out.println(users[id-1]);
+        User user=userController.findUser(id);
+        System.out.println(user.show());
     }
 
     // 退出
