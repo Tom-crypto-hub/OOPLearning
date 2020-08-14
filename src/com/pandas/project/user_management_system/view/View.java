@@ -1,14 +1,17 @@
 package com.pandas.project.user_management_system.view;
 
+import com.pandas.learn.zt.day09.Array;
 import com.pandas.project.user_management_system.controller.LoginController;
 import com.pandas.project.user_management_system.controller.UserController;
 import com.pandas.project.user_management_system.model.User;
 import com.pandas.project.user_management_system.util.FileOperation;
+import com.pandas.project.user_management_system.util.LogSystem;
 import com.pandas.project.user_management_system.util.MenuUtil;
 import com.pandas.project.user_management_system.util.NumberUtil;
 
 import java.io.FilePermission;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -19,6 +22,7 @@ import java.util.Scanner;
 public class View {
     UserController userController = new UserController(Objects.requireNonNull(FileOperation.readTxt()));
     Scanner scanner = new Scanner(System.in);
+    LogSystem logSystem = new LogSystem();
 
     public View() throws IOException {
     }
@@ -68,12 +72,26 @@ public class View {
         char gender=MenuUtil.readChar();
         System.out.println("请输入年龄：");
         int age=MenuUtil.readInt();
-        System.out.println("请输入电话：");
-        String phone= MenuUtil.readString(11);
-        if(!NumberUtil.isMobile(phone)) {
-            System.out.println("输入格式不符合规范");
-            phone = "17700000000";
+
+        String phone = "";
+        int time = 1;
+        while (time <= 5) {
+            System.out.println("请输入电话：");
+            phone = MenuUtil.readString(11);
+            if (NumberUtil.isMobile(phone)) {
+                break;
+            }
+            else {
+                if(time != 5)
+                    System.out.println("输入格式不符合规范，您还有" + (5 - time) + "次机会");
+                else {
+                    System.out.println("输入格式不符合规范，请重新输入：");
+                    return;
+                }
+            }
+            time++;
         }
+
         System.out.println("请输入邮箱：");
         String email=MenuUtil.readString(20);
         if (!NumberUtil.checkEmail(email)){
@@ -129,9 +147,8 @@ public class View {
         user.setEmail(MenuUtil.readString(20,user.getEmail()));
         if (!NumberUtil.checkEmail(user.getEmail())){
             System.out.println("输入格式不符合规范");
-            user.setEmail("12357@qq.com")  ;
+            user.setEmail("12357@qq.com");
         }
-       // User user=new User(id,name,gender,age,phone,email);
         System.out.println("确定修改Y/N：");
         char yesOrNo=scanner.next().charAt(0);
         if(yesOrNo=='Y') {
