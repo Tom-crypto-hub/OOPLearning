@@ -1,4 +1,4 @@
-package com.pandas.project.user_management_system.controller;
+package com.pandas.project.user_management_system.service;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
  * @author wangjing
  * @create 2020-08-13 16:35
  */
-public class LoginController {
+public class LoginService {
     // 登录
     private String adminName="admin";
     private String adminPassword="admin";

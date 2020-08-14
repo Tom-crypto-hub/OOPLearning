@@ -1,10 +1,10 @@
-package com.pandas.project.user_management_system.controller;
+package com.pandas.project.user_management_system.service;
 
 import com.pandas.project.user_management_system.model.User;
 
 
 
-public class UserController {
+public class UserService {
     // 用户组
     private User[] users;
     // 用户总数
@@ -13,12 +13,12 @@ public class UserController {
     private int cap = 16;
 
     // 构造方法
-    public UserController(){
+    public UserService(){
         users = new User[cap];
     }
 
     // 读取文件内容初始化用户数组
-    public UserController(User[] users){
+    public UserService(User[] users){
         while (cap < users.length){
             cap = cap<<1;
         }

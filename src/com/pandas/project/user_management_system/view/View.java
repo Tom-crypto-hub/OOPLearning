@@ -1,14 +1,13 @@
 package com.pandas.project.user_management_system.view;
 
-import com.pandas.project.user_management_system.controller.LoginController;
-import com.pandas.project.user_management_system.controller.UserController;
+import com.pandas.project.user_management_system.service.LoginService;
+import com.pandas.project.user_management_system.service.UserService;
 import com.pandas.project.user_management_system.model.User;
 import com.pandas.project.user_management_system.util.FileOperation;
 import com.pandas.project.user_management_system.util.LogSystem;
 import com.pandas.project.user_management_system.util.MenuUtil;
 import com.pandas.project.user_management_system.util.NumberUtil;
 
-import java.io.FilePermission;
 import java.io.IOException;
 import java.util.Objects;
 import java.util.Scanner;
@@ -18,7 +17,7 @@ import java.util.Scanner;
  * @create 2020-08-13 16:04
  */
 public class View {
-    UserController userController = new UserController(Objects.requireNonNull(FileOperation.readTxt()));
+    UserService userService = new UserService(Objects.requireNonNull(FileOperation.readTxt()));
     Scanner scanner = new Scanner(System.in);
     LogSystem logSystem = new LogSystem();
 
@@ -31,9 +30,9 @@ public class View {
         System.out.println("\t\t\t*****************************");
         System.out.println("\t\t**************************************");
         System.out.println("\t******************请登录******************************");
-        LoginController loginController=new LoginController();
+        LoginService loginService =new LoginService();
         //登陆成功返回true，登陆失败返回false
-        return loginController.login();
+        return loginService.login();
     }
 
     // 菜单界面
@@ -53,13 +52,13 @@ public class View {
     public void showUserListUI(){
         System.out.println("\t\t\t-------------用户列表-------------");
         System.out.println("\t\t编号\t\t姓名\t\t年龄\t\t性别\t\t电话\t\t邮箱");
-        User[] users = userController.show();
+        User[] users = userService.show();
         for (int i = 0; i< users.length;i++){
             System.out.println("\t\t"+(i+1)+"\t\t\t"+users[i].getName()+"\t\t\t"
                     +users[i].getAge()+"\t\t\t"+users[i].getGender()
                     +"\t\t\t"+users[i].getPhone()+"\t\t\t"+users[i].getEmail());
         }
-        System.out.println("共有"+userController.getTotal()+"条数据");
+        System.out.println("共有"+ userService.getTotal()+"条数据");
     }
 
     // 新增用户界面
@@ -69,8 +68,10 @@ public class View {
         String name=MenuUtil.readString(5);
         System.out.println("请输入性别：");
         char gender=MenuUtil.readChar();
-        if(gender != '男' || gender != '女')
-            gender = '男';
+        if(gender == '男' || gender == '女'){
+
+        }
+        else gender = '男';
         System.out.println("请输入年龄：");
         int age=MenuUtil.readInt();
         System.out.println("请输入电话：");
@@ -85,8 +86,8 @@ public class View {
             System.out.println("输入格式不符合规范");
             email = "123567@qq.com";
         }
-        User user=new User(userController.getTotal() + 1,name,gender, age,phone,email);
-        if(userController.addUser(user))
+        User user=new User(userService.getTotal() + 1,name,gender, age,phone,email);
+        if(userService.addUser(user))
             System.out.println("用户添加成功！");
         else System.out.println("用户添加失败！");
         logSystem.addLogs("新增用户：" + user.show());
@@ -97,11 +98,11 @@ public class View {
         System.out.println("\t-----------删除用户-----------");
         System.out.println("请输入要删除的用户编号：");
         int userId=scanner.nextInt();
-        User user = userController.findUser(userId);
+        User user = userService.findUser(userId);
         System.out.println("确定删除Y/N：");
         char yesOrNo=scanner.next().charAt(0);
         if(yesOrNo=='Y'){
-            if(userController.delUser(userId)){
+            if(userService.delUser(userId)){
                 System.out.println("删除成功");
             }else {
                 System.out.println("删除失败");
@@ -119,11 +120,11 @@ public class View {
         System.out.println("\t-----------更改用户-----------");
         System.out.println("请输入修改用户的编号：");
         int id=scanner.nextInt();
-        if(id>userController.getTotal()){
+        if(id> userService.getTotal()){
             System.out.println("当前用户不存在");
             return;
         }
-        User user = userController.findUser(id);
+        User user = userService.findUser(id);
         System.out.println("请输入姓名：");
         user.setName(MenuUtil.readString(5,user.getName()));
         System.out.println("请输入性别：");
@@ -148,7 +149,7 @@ public class View {
         System.out.println("确定修改Y/N：");
         char yesOrNo=scanner.next().charAt(0);
         if(yesOrNo=='Y') {
-            if (userController.updateUser(user)) {
+            if (userService.updateUser(user)) {
                 System.out.println("修改成功");
                 logSystem.addLogs("修改用户成功：" + user.show());
             } else {
@@ -165,14 +166,14 @@ public class View {
         System.out.println("\t-----------查找用户-----------");
         System.out.println("请输入查找用户的编号：");
         int id=scanner.nextInt();
-        User user=userController.findUser(id);
+        User user= userService.findUser(id);
         System.out.println(user.show());
     }
 
     // 退出
     public void exitSystem() throws IOException {
         // 存入文件
-        FileOperation.writeTxt(userController.show(), userController.getTotal());
+        FileOperation.writeTxt(userService.show(), userService.getTotal());
         // 写入日志
         logSystem.resetLogContext();
         System.out.println("系统退出成功！");
