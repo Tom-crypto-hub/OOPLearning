@@ -62,26 +62,36 @@ public class View {
     // 新增用户界面
     public void addUserUI(){
         System.out.println("\t-----------新增用户-----------");
-        System.out.println("请输入姓名：");
-        String name=MenuUtil.readString(5);
-        System.out.println("请输入性别：");
-        char gender=MenuUtil.readChar();
-        System.out.println("请输入年龄：");
-        int age=MenuUtil.readInt();
-        System.out.println("请输入电话：");
-        String phone= MenuUtil.readString(11);
-        if(!NumberUtil.isMobile(phone)) {
-            System.out.println("输入格式不符合规范");
-            phone = "17700000000";
+        int n = 0;
+        while (n < 5){
+            System.out.println("请输入姓名：");
+            String name=MenuUtil.readString(5);
+            System.out.println("请输入性别：");
+            char gender=MenuUtil.readChar();
+            System.out.println("请输入年龄：");
+            int age=MenuUtil.readInt();
+            System.out.println("请输入电话：");
+            String phone= MenuUtil.readString(11);
+            if(!NumberUtil.isMobile(phone)) {
+                System.out.println("输入格式不符合规范");
+                n++;
+                System.out.println("剩余" + (5-n) + "次机会！");
+                continue;
+
+            }
+            System.out.println("请输入邮箱：");
+            String email=MenuUtil.readString(20);
+            if (!NumberUtil.checkEmail(email)){
+                System.out.println("输入格式不符合规范");
+                n++;
+                System.out.println("剩余" + (5-n) + "次机会！");
+                continue;
+            }
+            User user=new User(userController.getTotal(),name,gender, age,phone,email);
+            userController.addUser(user);
         }
-        System.out.println("请输入邮箱：");
-        String email=MenuUtil.readString(20);
-        if (!NumberUtil.checkEmail(email)){
-            System.out.println("输入格式不符合规范");
-            email = "12357@qq.com";
-        }
-        User user=new User(userController.getTotal(),name,gender, age,phone,email);
-        userController.addUser(user);
+
+
     }
 
     // 删除用户界面
@@ -106,43 +116,53 @@ public class View {
     // 更改用户界面
     public void updateUserUI(){
         System.out.println("\t-----------更改用户-----------");
-        System.out.println("请输入修改用户的编号：");
-        int id=scanner.nextInt();
-        if(id>userController.getTotal()){
-            System.out.println("当前用户不存在");
-            return;
-        }
-        User user = userController.findUser(id);
-        System.out.println("请输入姓名：");
-        user.setName(MenuUtil.readString(5,user.getName()));
-        System.out.println("请输入性别：");
-        user.setGender(MenuUtil.readChar(user.getGender()));
-        System.out.println("请输入年龄：");
-        user.setAge(MenuUtil.readInt(user.getAge()));
-        System.out.println("请输入电话：");
-        user.setPhone(MenuUtil.readString(11,user.getPhone()));
-        if(!NumberUtil.isMobile(user.getPhone())) {
-            System.out.println("输入格式不符合规范");
-            user.setPhone("17700000000");
-        }
-        System.out.println("请输入邮箱：");
-        user.setEmail(MenuUtil.readString(20,user.getEmail()));
-        if (!NumberUtil.checkEmail(user.getEmail())){
-            System.out.println("输入格式不符合规范");
-            user.setEmail("12357@qq.com")  ;
-        }
-       // User user=new User(id,name,gender,age,phone,email);
-        System.out.println("确定修改Y/N：");
-        char yesOrNo=scanner.next().charAt(0);
-        if(yesOrNo=='Y') {
-            if (userController.updateUser(user)) {
-                System.out.println("修改成功");
-            } else {
-                System.out.println("修改失败");
+        int n = 0;
+        while (n < 5){
+            System.out.println("请输入修改用户的编号：");
+            int id=scanner.nextInt();
+            if(id>userController.getTotal()){
+                System.out.println("当前用户不存在");
+                return;
             }
-        }else{
-            return;
+            User user = userController.findUser(id);
+            System.out.println("请输入姓名：");
+            user.setName(MenuUtil.readString(5,user.getName()));
+            System.out.println("请输入性别：");
+            user.setGender(MenuUtil.readChar(user.getGender()));
+            System.out.println("请输入年龄：");
+            user.setAge(MenuUtil.readInt(user.getAge()));
+            System.out.println("请输入电话：");
+            user.setPhone(MenuUtil.readString(11,user.getPhone()));
+            if(!NumberUtil.isMobile(user.getPhone())) {
+                System.out.println("输入格式不符合规范");
+                n++;
+                System.out.println("剩余" + (5-n) + "次机会！");
+                continue;
+            }
+            System.out.println("请输入邮箱：");
+            user.setEmail(MenuUtil.readString(20,user.getEmail()));
+            if (!NumberUtil.checkEmail(user.getEmail())){
+                System.out.println("输入格式不符合规范");
+                n++;
+                System.out.println("剩余" + (5-n) + "次机会！");
+                continue;
+            }
+
+            System.out.println("确定修改Y/N：");
+            char yesOrNo=scanner.next().charAt(0);
+            if(yesOrNo=='Y') {
+                if (userController.updateUser(user)) {
+                    System.out.println("修改成功");
+                    break;
+                } else {
+                    System.out.println("修改失败");
+                    break;
+                }
+            }else{
+                return;
+            }
         }
+
     }
 
     // 查找用户界面
