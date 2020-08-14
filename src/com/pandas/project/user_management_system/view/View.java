@@ -2,7 +2,6 @@ package com.pandas.project.user_management_system.view;
 
 import com.pandas.project.user_management_system.controller.UserController;
 import com.pandas.project.user_management_system.model.User;
-import com.pandas.project.user_management_system.util.MenuUtil;
 
 import java.util.Scanner;
 
@@ -90,17 +89,19 @@ public class View {
             System.out.println("当前用户不存在");
             return;
         }
-        User user = userController.findUser(id);
         System.out.println("请输入姓名：");
-        user.setName(MenuUtil.readString(5,user.getName()));
+        String name= scanner.next();
+
         System.out.println("请输入性别：");
-        user.setGender(MenuUtil.readChar(user.getGender()));
+        char gender=scanner.next().charAt(0);
+
         System.out.println("请输入年龄：");
-        user.setAge(MenuUtil.readInt(user.getAge()));
+        int age=scanner.nextInt();
         System.out.println("请输入电话：");
-        user.setPhone(MenuUtil.readString(11,user.getPhone()));
+        String phone=scanner.next();
         System.out.println("请输入邮箱：");
-        user.setEmail(MenuUtil.readString(20,user.getEmail()));
+        String email=scanner.next();
+        User user=new User(id,name,gender,age,phone,email);
         System.out.println("确定修改Y/N：");
         char yesOrNo=scanner.next().charAt(0);
         if(yesOrNo=='Y') {
@@ -118,12 +119,13 @@ public class View {
     public void findUserUI(){
         System.out.println("\t-----------查找用户-----------");
         System.out.println("请输入查找用户的编号：");
+        User[] users=userController.show();
         int id=scanner.nextInt();
-        User user = userController.findUser(id);
-        user.show();
-
-
-
+        if(id>users.length){
+            System.out.println("当前用户不存在");
+            return;
+        }
+        System.out.println(users[id-1]);
     }
 
     // 退出
