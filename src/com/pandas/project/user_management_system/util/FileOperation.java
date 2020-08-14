@@ -2,7 +2,9 @@ package com.pandas.project.user_management_system.util;
 
 import com.pandas.project.user_management_system.model.User;
 
+import javax.sound.midi.SoundbankResource;
 import java.io.*;
+import java.util.Arrays;
 
 /**
  * @author wangjing
@@ -16,7 +18,10 @@ public class FileOperation {
     public static String getFilename(){
         // 生成文件路径
         String classPath = FileOperation.class.getResource("/").getPath();
+        classPath = classPath.substring(1, classPath.length());
+        System.out.println(classPath + "UserList.txt");
         return classPath + "UserList.txt";
+
     }
 
     // 读取文件
@@ -65,9 +70,12 @@ public class FileOperation {
         if(str.equals("")) return null;
 
         String[] strs = str.split("\n");
+        System.out.println(str);
         User[] users = new User[strs.length];
         for(int i = 0; i< strs.length; i++){
             String[] s = strs[i].split("\t");
+            System.out.println(Arrays.toString(s));
+            users[i] = new User();
             users[i].setId(Integer.parseInt(s[0]));
             users[i].setName(s[1]);
             users[i].setGender(s[2].charAt(0));

@@ -106,10 +106,9 @@ public class View {
     // 更改用户界面
     public void updateUserUI(){
         System.out.println("\t-----------更改用户-----------");
-        User[] users=userController.show();
         System.out.println("请输入修改用户的编号：");
         int id=scanner.nextInt();
-        if(id>users.length){
+        if(id>userController.getTotal()){
             System.out.println("当前用户不存在");
             return;
         }

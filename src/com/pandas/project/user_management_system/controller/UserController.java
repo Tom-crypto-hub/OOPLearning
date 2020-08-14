@@ -19,12 +19,18 @@ public class UserController {
 
     // 读取文件内容初始化用户数组
     public UserController(User[] users){
-        while (cap < users.length){
-            cap = cap<<1;
+        if(users == null)
+        {
+            users = new User[cap];
         }
-        this.users = new User[cap];
-        this.total = users.length;
-        System.arraycopy(users, 0, this.users, 0, this.total);
+        else {
+            while (cap < users.length) {
+                cap = cap << 1;
+            }
+            this.users = new User[cap];
+            this.total = users.length;
+            System.arraycopy(users, 0, this.users, 0, this.total);
+        }
     }
 
     // 获取用户个数
@@ -86,9 +92,8 @@ public class UserController {
     public User findUser(int index){
         if(index-1<0||index>total){
             System.out.println("当前用户不存在");
-
         }
-        return users[index-1];
+        return users[index - 1];
     }
 
     // 退出
