@@ -62,6 +62,8 @@ public class FileOperation {
     public static User[] readTxt() throws IOException {
         // 生成文件路径
         String str = readFile(getFilename());
+        if(str.equals("")) return null;
+
         String[] strs = str.split("\n");
         User[] users = new User[strs.length];
         for(int i = 0; i< strs.length; i++){

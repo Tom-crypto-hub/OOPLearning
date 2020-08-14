@@ -1,9 +1,15 @@
 package com.pandas.project.user_management_system.view;
 
+import com.pandas.project.user_management_system.controller.LoginController;
 import com.pandas.project.user_management_system.controller.UserController;
 import com.pandas.project.user_management_system.model.User;
+import com.pandas.project.user_management_system.util.FileOperation;
 import com.pandas.project.user_management_system.util.MenuUtil;
+import com.pandas.project.user_management_system.util.NumberUtil;
 
+import java.io.FilePermission;
+import java.io.IOException;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -11,12 +17,21 @@ import java.util.Scanner;
  * @create 2020-08-13 16:04
  */
 public class View {
-    UserController userController = new UserController();
+    UserController userController = new UserController(Objects.requireNonNull(FileOperation.readTxt()));
     Scanner scanner = new Scanner(System.in);
+
+    public View() throws IOException {
+    }
 
     // 欢迎来到用户管理登录界面
     public boolean loginUI(){
-        return false;
+        System.out.println("\t\t\t\t欢迎进入用户管理系统");
+        System.out.println("\t\t\t*****************************");
+        System.out.println("\t\t**************************************");
+        System.out.println("\t******************请登录******************************");
+        LoginController loginController=new LoginController();
+        //登陆成功返回true，登陆失败返回false
+        return loginController.login();
     }
 
     // 菜单界面
@@ -48,15 +63,23 @@ public class View {
     public void addUserUI(){
         System.out.println("\t-----------新增用户-----------");
         System.out.println("请输入姓名：");
-        String name=scanner.next();
+        String name=MenuUtil.readString(5);
         System.out.println("请输入性别：");
-        char gender=scanner.next().charAt(0);
+        char gender=MenuUtil.readChar();
         System.out.println("请输入年龄：");
-        int age=scanner.nextInt();
+        int age=MenuUtil.readInt();
         System.out.println("请输入电话：");
-        String phone=scanner.next();
+        String phone= MenuUtil.readString(11);
+        if(!NumberUtil.isMobile(phone)) {
+            System.out.println("输入格式不符合规范");
+            phone = "17700000000";
+        }
         System.out.println("请输入邮箱：");
-        String email=scanner.next();
+        String email=MenuUtil.readString(20);
+        if (!NumberUtil.checkEmail(email)){
+            System.out.println("输入格式不符合规范");
+            email = "12357@qq.com";
+        }
         User user=new User(userController.getTotal(),name,gender, age,phone,email);
         userController.addUser(user);
     }
@@ -99,8 +122,16 @@ public class View {
         user.setAge(MenuUtil.readInt(user.getAge()));
         System.out.println("请输入电话：");
         user.setPhone(MenuUtil.readString(11,user.getPhone()));
+        if(!NumberUtil.isMobile(user.getPhone())) {
+            System.out.println("输入格式不符合规范");
+            user.setPhone("17700000000");
+        }
         System.out.println("请输入邮箱：");
         user.setEmail(MenuUtil.readString(20,user.getEmail()));
+        if (!NumberUtil.checkEmail(user.getEmail())){
+            System.out.println("输入格式不符合规范");
+            user.setEmail("12357@qq.com")  ;
+        }
        // User user=new User(id,name,gender,age,phone,email);
         System.out.println("确定修改Y/N：");
         char yesOrNo=scanner.next().charAt(0);
@@ -125,39 +156,43 @@ public class View {
     }
 
     // 退出
-    public void exitSystem(){
+    public void exitSystem() throws IOException {
+        // 存入文件
+        FileOperation.writeTxt(userController.show(), userController.getTotal());
         System.out.println("系统退出成功！");
         System.exit(0);
     }
 
     // 汇总
-    public void start(){
-        while (true) {
-            printMenu();
-            System.out.println("请输入指令");
-            int i = scanner.nextInt();
-            switch (i) {
-                case 1:
-                    showUserListUI();
-                    break;
-                case 2:
-                    addUserUI();
-                    break;
-                case 3:
-                    delUserUI();
-                    break;
-                case 4:
-                    updateUserUI();
-                    break;
-                case 5:
-                    findUserUI();
-                    break;
-                case 6:
-                    exitSystem();
-                    break;
-                default:
-                    System.out.println("输入指令错误");
-                    break;
+    public void start() throws IOException {
+        if (loginUI()) {
+            while (true) {
+                printMenu();
+                System.out.println("请输入指令");
+                int i = scanner.nextInt();
+                switch (i) {
+                    case 1:
+                        showUserListUI();
+                        break;
+                    case 2:
+                        addUserUI();
+                        break;
+                    case 3:
+                        delUserUI();
+                        break;
+                    case 4:
+                        updateUserUI();
+                        break;
+                    case 5:
+                        findUserUI();
+                        break;
+                    case 6:
+                        exitSystem();
+                        break;
+                    default:
+                        System.out.println("输入指令错误");
+                        break;
+                }
             }
         }
     }
