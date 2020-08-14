@@ -2,7 +2,7 @@ package com.pandas.project.user_management_system.controller;
 
 import com.pandas.project.user_management_system.model.User;
 
-import javax.jws.soap.SOAPBinding;
+
 
 public class UserController {
     // 用户组
@@ -23,32 +23,63 @@ public class UserController {
     }
 
     // 获取用户列表
-    public void show(){
-
+    public User[] show(){
+        User[] usersInfo = new User[total];
+        for (int i = 0; i <usersInfo.length ; i++) {
+            usersInfo[i]=users[i];
+        }
+        return usersInfo;
     }
 
     // 新增用户
     public boolean addUser(User user){
-        return false;
+        if (users.length<=total){
+            cap = cap<<1;
+            users[total]=user;
+            total++;
+            return true;
+        }else{
+            users[total]=user;
+            total++;
+        }
+        return true;
     }
 
     // 删除用户
-    public boolean delUser(User user){
-        return false;
+    public boolean delUser(int index){
+        if(index > total || index < 0){
+            return false;
+        }
+        for (int i = index-1; i <total-1 ; i++) {
+            users[i]=users[i+1];
+        }
+        users[total-1]=null;
+        total--;
+        return true;
+
     }
 
     // 修改用户
     public boolean updateUser(User user){
-        return false;
+        if(user.getId()-1<0||user.getId()>total){
+            System.out.println("当前用户不存在");
+            return false;
+        }
+        users[user.getId()-1]=user;
+        return true;
     }
 
     // 查找用户
     public User findUser(int index){
-        return new User();
+        if(index-1<0||index>total){
+            System.out.println("当前用户不存在");
+
+        }
+        return users[index-1];
     }
 
     // 退出
-    public int exit(){
-        return 0;
+    public void exit(){
+        System.exit(0);
     }
 }

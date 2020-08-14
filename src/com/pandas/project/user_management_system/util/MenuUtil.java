@@ -12,7 +12,7 @@ public class MenuUtil {
         String str = readKeyBoard(1, false);
         return str.charAt(0);
     }
-    /**
+    /*
      从键盘读取一个字符，并将其作为方法的返回值。
      如果用户不输入字符而直接回车，方法将以defaultValue 作为返回值。
      */
@@ -20,7 +20,7 @@ public class MenuUtil {
         String str = readKeyBoard(1, true);
         return (str.length() == 0) ? defaultValue : str.charAt(0);
     }
-    /**
+    /*
      从键盘读取一个长度不超过2位的整数，并将其作为方法的返回值。
      */
     public static int readInt() {
@@ -36,7 +36,7 @@ public class MenuUtil {
         }
         return n;
     }
-    /**
+    /*
      从键盘读取一个长度不超过2位的整数，并将其作为方法的返回值。
      如果用户不输入字符而直接回车，方法将以defaultValue 作为返回值。
      */
@@ -57,13 +57,13 @@ public class MenuUtil {
         }
         return n;
     }
-    /**
+    /*
      从键盘读取一个长度不超过limit的字符串，并将其作为方法的返回值。
      */
     public static String readString(int limit) {
         return readKeyBoard(limit, false);
     }
-    /**
+    /*
      从键盘读取一个长度不超过limit的字符串，并将其作为方法的返回值。
      如果用户不输入字符而直接回车，方法将以defaultValue 作为返回值。
      */
@@ -71,7 +71,7 @@ public class MenuUtil {
         String str = readKeyBoard(limit, true);
         return str.equals("")? defaultValue : str;
     }
-    /**
+    /*
      用于确认选择的输入。该方法从键盘读取‘Y’或’N’，并将其作为方法的返回值。
      */
     public static char readConfirmSelection() {
