@@ -56,21 +56,30 @@ public class UserController {
         users[total-1]=null;
         total--;
         return true;
-        //ssssssssssssssssssssss
+
     }
 
     // 修改用户
     public boolean updateUser(User user){
-        return false;
+        if(user.getId()-1<0||user.getId()>total){
+            System.out.println("当前用户不存在");
+            return false;
+        }
+        users[user.getId()-1]=user;
+        return true;
     }
 
     // 查找用户
     public User findUser(int index){
-        return new User();
+        if(index-1<0||index>total){
+            System.out.println("当前用户不存在");
+
+        }
+        return users[index-1];
     }
 
     // 退出
-    public int exit(){
-        return 0;
+    public void exit(){
+        System.exit(0);
     }
 }
