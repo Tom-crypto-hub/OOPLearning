@@ -2,6 +2,7 @@ package com.pandas.project.user_management_system.view;
 
 import com.pandas.project.user_management_system.controller.UserController;
 import com.pandas.project.user_management_system.model.User;
+import com.pandas.project.user_management_system.util.MenuUtil;
 
 import java.util.Scanner;
 
@@ -89,19 +90,18 @@ public class View {
             System.out.println("当前用户不存在");
             return;
         }
+        User user = userController.findUser(id);
         System.out.println("请输入姓名：");
-        String name= scanner.next();
-
+        user.setName(MenuUtil.readString(5,user.getName()));
         System.out.println("请输入性别：");
-        char gender=scanner.next().charAt(0);
-
+        user.setGender(MenuUtil.readChar(user.getGender()));
         System.out.println("请输入年龄：");
-        int age=scanner.nextInt();
+        user.setAge(MenuUtil.readInt(user.getAge()));
         System.out.println("请输入电话：");
-        String phone=scanner.next();
+        user.setPhone(MenuUtil.readString(11,user.getPhone()));
         System.out.println("请输入邮箱：");
-        String email=scanner.next();
-        User user=new User(id,name,gender,age,phone,email);
+        user.setEmail(MenuUtil.readString(20,user.getEmail()));
+       // User user=new User(id,name,gender,age,phone,email);
         System.out.println("确定修改Y/N：");
         char yesOrNo=scanner.next().charAt(0);
         if(yesOrNo=='Y') {
