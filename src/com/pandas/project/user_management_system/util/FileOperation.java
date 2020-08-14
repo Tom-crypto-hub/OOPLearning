@@ -1,5 +1,7 @@
 package com.pandas.project.user_management_system.util;
 
+import com.pandas.project.user_management_system.model.User;
+
 import java.io.*;
 
 /**
@@ -10,6 +12,13 @@ import java.io.*;
  */
 
 public class FileOperation {
+
+    public static String getFilename(){
+        // 生成文件路径
+        String classPath = FileOperation.class.getResource("/").getPath();
+        return classPath + "UserList.txt";
+    }
+
     // 读取文件
     public static String readFile(String filename) throws IOException {
         File file = new File(filename);
@@ -39,6 +48,32 @@ public class FileOperation {
         fs = new FileOutputStream(outfile);
         fs.write(b);
         fs.close();
+    }
+
+    // 将用户保存到文件中
+    public static void writeTxt(User[] user, int total) throws IOException {
+        StringBuilder context = new StringBuilder();
+        for(int i = 0; i < total; i++){
+            context.append(user[i].show()).append("\n");
+        }
+        writeFile(getFilename(), context.toString());
+    }
+
+    public static User[] readTxt() throws IOException {
+        // 生成文件路径
+        String str = readFile(getFilename());
+        String[] strs = str.split("\n");
+        User[] users = new User[strs.length];
+        for(int i = 0; i< strs.length; i++){
+            String[] s = strs[i].split("\t");
+            users[i].setId(Integer.parseInt(s[0]));
+            users[i].setName(s[1]);
+            users[i].setGender(s[2].charAt(0));
+            users[i].setAge(Integer.parseInt(s[3]));
+            users[i].setPhone(s[4]);
+            users[i].setEmail(s[5]);
+        }
+        return users;
     }
 }
 

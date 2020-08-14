@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a3a937a-4dcd-472f-a0f3-2a05873c79ec" name="Default Changelist" comment="2020年8月14日09:20:00">
+    <list default="true" id="1a0f01d6-dba0-4567-b8d4-aeba8dd2c2ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_8_13_20_33__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_8_13_20_33__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_8_14_8_09__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020_8_14_8_09__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/util/FileOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/pandas/project/user_management_system/util/FileOperation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,32 +215,23 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1323" height="125" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1597366256658" />
-    <state x="147" y="71" key="MergeDialog" timestamp="1597368288748">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="147" y="71" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1597368288748" />
-    <state x="477" y="129" key="MultipleFileMergeDialog" timestamp="1597368288757">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="477" y="129" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1597368288757" />
     <state x="463" y="0" key="SettingsEditor" timestamp="1597318034855">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="463" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597318034855" />
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1597368303480">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="321" y="139" key="Vcs.Push.Dialog.v2" timestamp="1597363437865">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="321" y="139" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1597363437865" />
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597368303480" />
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1597316714565" />
     <state x="363" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1597363209312">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="363" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1597363209312" />
-    <state x="534" y="323" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597368260339">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="475" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597363626058">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="475" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1597363626058" />
-    <state x="534" y="323" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1597368260339" />
     <state x="560" y="205" key="git4idea.merge.GitPullDialog" timestamp="1597303732156">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

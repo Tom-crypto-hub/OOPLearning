@@ -78,7 +78,6 @@ public class UserController {
             System.out.println("当前用户不存在");
 
         }
-
         return users[index-1];
     }
 
