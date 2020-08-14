@@ -68,8 +68,18 @@ public class LogSystem {
 
     // 显示日志
     public void showLog(){
-        for(int i = 0; i < _length; i++){
+        System.out.println("-------------------------------------------");
+
+        int i = 0;
+        if (_length >= 10){
+            i = _length - 10;
+            System.out.println("最近 10 条日志信息：");
+        }
+        else System.out.printf("最近 %s 条日志信息：", _length);
+
+        for( ; i < _length; i++){
             System.out.println(this._logs[i]);
         }
+        System.out.println("-------------------------------------------");
     }
 }
