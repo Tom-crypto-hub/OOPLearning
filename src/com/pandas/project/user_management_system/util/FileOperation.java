@@ -81,11 +81,9 @@ public class FileOperation {
         if(str.equals("")) return null;
 
         String[] strs = str.split("\n");
-        System.out.println(str);
         User[] users = new User[strs.length];
         for(int i = 0; i< strs.length; i++){
             String[] s = strs[i].split("\t");
-            System.out.println(Arrays.toString(s));
             users[i] = new User();
             users[i].setId(Integer.parseInt(s[0]));
             users[i].setName(s[1]);

@@ -1,5 +1,6 @@
 package com.pandas.learn.wj.practice_daily.prictice20_08_14;
 
+import com.pandas.learn.zt.day09.Array;
 import com.pandas.project.user_management_system.util.NumberUtil;
 
 import javax.sound.midi.SoundbankResource;
@@ -42,6 +43,7 @@ public class Generic {
 
 class LinkedList<T extends Number> {
     ArrayList<T> arrayList;
+
 
     public void setArrayList(ArrayList<T> arrayList) {
         this.arrayList = arrayList;

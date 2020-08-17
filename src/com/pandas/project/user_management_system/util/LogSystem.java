@@ -26,7 +26,6 @@ public class LogSystem {
         this._length = 0;
         this._logs = new String[maxLogNum];
         getLogs();
-        System.out.println(_length);
     }
 
     // 读取日志信息
