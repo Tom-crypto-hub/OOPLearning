@@ -1,5 +1,7 @@
 package com.pandas.learn.wj.studyfile.day20_08_18.exc;
 
+import java.util.Scanner;
+
 /**
  * @author wangjing
  * @create 2020-08-18 9:49
