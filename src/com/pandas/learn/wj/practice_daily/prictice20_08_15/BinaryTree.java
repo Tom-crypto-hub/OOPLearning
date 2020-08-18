@@ -7,10 +7,6 @@ package com.pandas.learn.wj.practice_daily.prictice20_08_15;
 public class BinaryTree {
     // 根节点
     Node root;
-//    // 树的深度
-//    int deep;
-//    // 树的节点数
-//    int length;
 
     //
     public BinaryTree(){
@@ -21,57 +17,41 @@ public class BinaryTree {
         root = new Node(key, value);
     }
 
-    // 添加一个节点
-//    public void addNode(String data){
-//        Node node = new Node();
-//        if(!data.equals("null")){
-//            node.value = Integer.parseInt(data);
-//            node.key = deep;
-//        }
-//        // 树中没有节点
-//        if(root == null){
-//            root = new Node();
-//            root.key = deep;
-//            root.value = node.value;
-//            deep++;
-//            length++;
-//        }
-//        else if(length <= (2 << deep)){
-//            if(length == 2 << deep)
-//                deep++;
-//            if(insertNode(root, node))
-//                length++;
-//        }
-//    }
+    // 判断当前key值是左子数还是右子树
+    public Node isLeftChild(Node node, int key){
+        Node result = null;
+        if(node != null){
+            result = isLeftChild(node.left, key);
+            if(node.key * 2 < key && node.key * 2 + 2 >= key){
+                result = node;
+            }
+            if(result == null)
+                result = isLeftChild(node.right, key);
+
+        }
+        return result;
+    }
 
     public void insertNode(int key, int value) {
         if (root == null) {
             root = new Node(key, value);
             return ;
         }
-        Node currentNode = root;
-        Node parentNode = root;
-        boolean isLeftChild = true;
-        while (currentNode != null) {
-            parentNode = currentNode;
-            if (key <= currentNode.key * 2 + 1) {
-                currentNode = currentNode.left;
-                isLeftChild = true;
-            } else {
-                currentNode = currentNode.right;
-                isLeftChild = false;
-            }
-        }
+
+        // 得到插入节点的父节点
+        Node result = isLeftChild(root, key);
+
         Node newNode = new Node(key, value);
-        if (isLeftChild) {
-            parentNode.left = newNode;
-        } else {
-            parentNode.right = newNode;
+        // 如果key值为单数，则为左节点
+        if(key % 2 == 0){
+            result.right = newNode;
+        }
+        else {
+            result.left = newNode;
         }
     }
 
     // 验证树
-
     public boolean isSearchTree(){
         return isSearchTree(root);
     }
@@ -90,7 +70,6 @@ public class BinaryTree {
             }
             if(!isSearchTree(node.right))
                 flag++;
-
         }
         return flag <= 0;
     }

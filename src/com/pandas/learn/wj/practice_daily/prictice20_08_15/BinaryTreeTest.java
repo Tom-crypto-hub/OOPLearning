@@ -21,6 +21,7 @@ public class BinaryTreeTest {
             }
         }
 
+        // [5,1,4,2,null,3,6]测试这个是否插入正确
 //        binaryTree.inOrder(binaryTree.root);
 //        System.out.println();
 
